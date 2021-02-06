@@ -1,0 +1,12 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #q:valid {
+        border: 1px solid green;
+    }
+    #q:invalid {
+        border: 1px solid red;
+    }
+}

@@ -1,0 +1,23 @@
+$body-color: whitesmoke;
+
+.container {
+  background-color: $body-color;
+  height: 100vh;
+  width: 100vw;
+
+  main {
+    height: 80%;
+    width: 80%;
+    display: grid;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    border-radius: 5px;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 10% 50% 40%;
+  }
+
+  a {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+}

@@ -1,0 +1,65 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "curly": ["error", "all"],
+        "lines-around-comment": [
+            "error",
+            {
+              "beforeBlockComment": true,
+              "afterBlockComment": true,
+              "beforeLineComment": true,
+              "afterLineComment": true,
+              "allowBlockStart": true,
+              "allowBlockEnd": true,
+              "allowObjectStart": true,
+              "allowObjectEnd": true,
+              "allowArrayStart": true,
+              "allowArrayEnd": true
+            }
+          ],
+          "max-len": ["error", {"code": 80, "ignoreUrls": true}],
+          "no-confusing-arrow": ["error", { "allowParens": false }],
+          "no-mixed-operators": "warn",
+          "no-tabs": ["error", {"allowIndentationTabs": true}],
+          "quotes": [
+            "error",
+            "single",
+            { "avoidEscape": true, "allowTemplateLiterals": false }
+          ],
+          "no-restricted-syntax": [
+            "error",
+            {
+              "selector": "SequenceExpression",
+              "message": "The comma operator is confusing and a common mistake. Don’t use it!"
+            }
+          ]
+    },
+    "overrides": [
+      {
+        "files": ["*"],
+        "rules": {
+          "no-process-envs": "off"
+        }
+      }
+    ]
+}
