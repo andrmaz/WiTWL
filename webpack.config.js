@@ -2,7 +2,6 @@
 /* eslint-disable lines-around-comment */
 /* eslint-disable quotes */
 
-require("@babel/polyfill");
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
@@ -11,7 +10,7 @@ module.exports = {
     mode: 'development',
     // "production" | "development" | "none"
     // Chosen mode tells webpack to use its built-in optimizations accordingly.
-    entry: ['@babel/polyfill', './src/index.js'],
+    entry: ['./src/index.js'],
     // Here the application starts executing
     // and webpack starts bundling
     output: {

@@ -1,12 +1,45 @@
-div {
+.box1 {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    #q:valid {
-        border: 1px solid green;
+    #q {
+        border-radius: 3px;
+        padding: 2px;
+
+        &:valid {
+            border: 3px solid green;
+        }
+        &:invalid {
+            border: 2px solid red;
+        }
     }
-    #q:invalid {
-        border: 1px solid red;
+
+    .label {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    
+    #button {
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 2px;
+        background-color: black;
+        color: white;
+        
+        &:focus {
+            transform: scale(0.9);
+            transition: width 2s linear 1s;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .box1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import './Current.scss';
 
 const Current = ({ weather }) => {
@@ -21,11 +21,11 @@ const Current = ({ weather }) => {
                 <p>{`Last updated: ${update}`}</p>
             </article>
         </section>
-    )
-}
+    );
+};
 
 Current.propTypes = {
     weather: PropTypes.object
-}
+};
 
-export default Current
+export default Current;

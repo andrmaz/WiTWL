@@ -2,13 +2,15 @@ $body-color: whitesmoke;
 
 .container {
   background-color: $body-color;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  display: flex;
 
   main {
     height: 80%;
     width: 80%;
     display: grid;
+    margin: auto;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 5px;
     grid-template-columns: 45% 55%;

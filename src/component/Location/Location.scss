@@ -15,3 +15,12 @@
         flex-flow: column;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .box2 {
+       .wrapper {
+            width: 100%;
+            align-items: center;
+        } 
+    }
+}

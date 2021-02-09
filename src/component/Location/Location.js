@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './Location.scss';
 
 const Location = ({ weather }) => {
@@ -19,8 +19,8 @@ const Location = ({ weather }) => {
                 <p>{`Time Zone: ${tz}`}</p>
             </article>
         </aside>
-    )
-}
+    );
+};
 
 Location.propTypes = {
     weather(props, propName, componentName){
@@ -29,9 +29,9 @@ Location.propTypes = {
                 `Hey, the component ${componentName} 
                 needs the prop ${propName} to be an object,
                 but you passed a ${typeof props[propName]}`
-            )
-        }
+            );
+        };
     },
-}
+};
 
-export default Location
+export default Location;

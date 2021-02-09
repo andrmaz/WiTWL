@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should render component correctly 1`] = `
+<div>
+  <form>
+    <label>
+      City :
+      <input
+        id="q"
+        maxLength="20"
+        name="city"
+        pattern="^([a-zA-Z]+\\\\s)*[a-zA-Z]+$"
+        required={true}
+        size="30"
+        title="Please make sure to remove unused white space"
+        type="text"
+      />
+    </label>
+    <input
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</div>
+`;

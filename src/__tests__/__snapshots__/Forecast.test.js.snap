@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forecast Component should render component correctly 1`] = `
+<section
+  className="box4"
+>
+  <h1
+    className="title"
+  >
+    Forecast
+  </h1>
+  <div
+    className="forecast"
+  >
+    <div
+      className="card"
+      key="0"
+    >
+      <p />
+      <span>
+        Date: 
+      </span>
+      <img
+        alt="forecastday"
+        src="http:undefined"
+      />
+    </div>
+  </div>
+</section>
+`;

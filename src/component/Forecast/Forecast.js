@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import './Forecast.scss';
 
 function Forecast({ weather }) {
@@ -21,12 +21,12 @@ function Forecast({ weather }) {
                 }
             </div>
         </section>
-    )
-}
+    );
+};
 
 Forecast.propTypes = {
     weather: PropTypes.object
-}
+};
 
-export default Forecast
+export default Forecast;
 

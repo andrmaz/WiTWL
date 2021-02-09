@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location Component should render component correctly 1`] = `
+<aside
+  className="box2"
+>
+  <article
+    className="wrapper"
+  >
+    <h2>
+      Location
+    </h2>
+    <p>
+      Country: 
+    </p>
+    <p>
+      Local Time: 
+    </p>
+    <p>
+      City: 
+    </p>
+    <p>
+      Region: 
+    </p>
+    <p>
+      Time Zone: 
+    </p>
+  </article>
+</aside>
+`;
