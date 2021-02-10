@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search component should render component correctly 1`] = `
-<div>
+<div
+  className="box1"
+>
   <form>
-    <label>
-      City :
+    <label
+      className="label"
+    >
+      City :  
       <input
         id="q"
         maxLength="20"
@@ -17,6 +21,7 @@ exports[`Search component should render component correctly 1`] = `
       />
     </label>
     <input
+      id="button"
       type="submit"
       value="Submit"
     />

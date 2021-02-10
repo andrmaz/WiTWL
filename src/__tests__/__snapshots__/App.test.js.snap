@@ -4,22 +4,33 @@ exports[`App Component should render Component correctly 1`] = `
 <div
   className="container"
 >
-  <main>
-    <Search
-      city=""
-      handleChange={[Function]}
-      handleSubmit={[Function]}
-    />
-    <Location
-      weather={Object {}}
-    />
-    <Current
-      weather={Object {}}
-    />
-    <Forecast
-      weather={Object {}}
-    />
-  </main>
+  <ErrorBoundary
+    FallbackComponent={[Function]}
+    onReset={[Function]}
+    resetKeys={
+      Array [
+        Object {},
+        "",
+      ]
+    }
+  >
+    <main>
+      <Search
+        city=""
+        handleChange={[Function]}
+        handleSubmit={[Function]}
+      />
+      <Location
+        weather={Object {}}
+      />
+      <Current
+        weather={Object {}}
+      />
+      <Forecast
+        weather={Object {}}
+      />
+    </main>
+  </ErrorBoundary>
   <a
     href="https://icons8.com/icon/D2RKDghvz9nr/tempo-piovoso"
   >

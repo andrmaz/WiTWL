@@ -1,12 +1,11 @@
-/* eslint-disable max-len */
-/* eslint-disable quotes */
-
 import React from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import { apiCall } from './api/apiCall';
 import Search from './component/Search/Search';
 import Current from './component/Current/Current';
 import Forecast from './component/Forecast/Forecast';
 import Location from './component/Location/Location';
+import ErrorFallback from './component/ErrorFallback/ErrorFallback';
 import './App.scss';
 
 class App extends React.Component {
@@ -31,20 +30,34 @@ class App extends React.Component {
     };
 
     render() {
-        const { weather } = this.state;
+        const { weather, city } = this.state;
         return (
             <div className='container'>
-                <main>
-                    <Search
-                        city={this.state.city}
-                        handleChange={this.handleChange} 
-                        handleSubmit={this.handleSubmit} 
-                    />
-                    <Location weather={weather} />
-                    <Current weather={weather} />
-                    <Forecast weather={weather} />
-                </main> 
-                <a href="https://icons8.com/icon/D2RKDghvz9nr/tempo-piovoso">Tempo piovoso icon by Icons8</a>
+                <ErrorBoundary
+                    FallbackComponent={ErrorFallback}
+                    onReset={() => {
+                        /* reset the state of your app 
+                        so the error doesn't happen again */
+
+                        this.setState({ weather: {}});
+                        this.setState({ city: ''});
+                    }}
+                    resetKeys={[weather, city]}
+                >
+                    <main>
+                        <Search
+                            city={city}
+                            handleChange={this.handleChange} 
+                            handleSubmit={this.handleSubmit} 
+                        />
+                        <Location weather={weather} />
+                        <Current weather={weather} />
+                        <Forecast weather={weather} />
+                    </main> 
+                </ErrorBoundary>
+                <a href="https://icons8.com/icon/D2RKDghvz9nr/tempo-piovoso">
+                    Tempo piovoso icon by Icons8
+                </a>
             </div>
         );
     };
