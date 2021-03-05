@@ -8,8 +8,8 @@ function Forecast({ weather }) {
             <h1 className='title'>Forecast</h1> 
             <div className='forecast'>
                 {
-                    weather?.forecast?.forecastday.map((day, index) => (
-                        <div key={index} className='card'>
+                    weather?.forecast?.forecastday.map((day) => (
+                        <div key={day.date} className='card'>
                             <p>{day.day.condition.text}</p>
                             <span>{`Date: ${day.date}`}</span>
                             <img 
